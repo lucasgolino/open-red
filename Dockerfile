@@ -7,15 +7,7 @@ RUN npm install node-red-contrib-telegrambot \
     node-red-contrib-chatbot \
     node-red-contrib-google-cloud \
     node-red-node-geofence \
-    node-red-contrib-speedtest
-
-RUN npm install \
-    node-red-contrib-unifi \
-    @flowfuse/node-red-dashboard \
-    node-red-contrib-uuid
-
-# RUN npm install \
-#     node-red-contrib-graphql-server
+    @flowfuse/node-red-dashboard
     
 USER root
 RUN apt update && \
