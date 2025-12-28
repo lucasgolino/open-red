@@ -8,7 +8,9 @@ if [ -f /data/package.json ]; then
     echo "/data/package.json exists merge and install."
 
     /usr/local/bin/node /opt/utils/merge_package.js $PWD/package.json /data/package.json $PWD/package.json
-    npm ci
+    
+    rm -f package-lock.json
+    npm install --force
 else
     echo "/data/package.json does not exist."
 fi
